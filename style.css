@@ -1,0 +1,236 @@
+:root {
+  --bg-color: #fff9fb; 
+  --card-bg: #ffffff;
+  --text-color: #2d3436;
+  --accent-pink: #f8a5c2; 
+  --accent-yellow: #f1c40f;
+  --border-color: var(--accent-pink);
+  --font-main: 'Pacifico', cursive; 
+  --font-body: 'Poppins', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body); 
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    width: 100%;
+}
+
+
+h1, h2, h3, .project p {
+    text-align: center;
+    font-family: var(--font-main); 
+}
+
+h1 {
+    font-size: 3rem; 
+    margin: 1.5rem 0;
+    color: white; 
+}
+
+h2 {
+    font-size: 2.2rem; 
+    color: var(--primary-color);
+}
+
+/* ---Navigation --- */
+#main-header {
+    background: linear-gradient(135deg, var(--accent-pink), #fab1a0); 
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#Coding {
+    background: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+
+nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 1; 
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+#skills {
+    padding: 0.5;
+    text-align: center;
+}
+
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#skills ul li {
+    background-color: var(--card-bg);
+    border: 2px dotted var(--accent-pink); 
+    border-radius: 30px;
+    padding: 0.6rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+#skills ul li:hover {
+    background-color: var(--accent-pink);
+    color: white;
+    border-color: var(--accent-pink);
+    transform: translateY(-3px) scale(1.05);
+}
+
+
+#project-showcase {
+    padding: 1rem;
+}
+
+.project {
+    background-color: var(--card-bg);
+    border: 2px dotted var(--accent-pink); 
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.project .project-img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 8px;
+    border: 2px dotted var(--accent-pink); 
+}
+
+.project .project-title {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #ed217b; 
+}
+
+.project-description {
+    color: #636e72;
+    font-size: 0.95rem;
+    max-width: 700px;
+    font-family: var(--font-body); 
+}
+
+/* --- Footer --- */
+footer {
+    background: linear-gradient(to right, var(--accent-pink), var(--accent-yellow)); 
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+a.btn-yellow:hover {
+    background-color: var(--accent-yellow);
+    color: var(--primary-color);
+}
+
+
+@media (min-width: 768px) {
+    .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    .row .col {
+        flex: 1 1 45%;
+        max-width: 480px;
+    }
+
+    nav {
+        display: block !important; 
+    }
+}
